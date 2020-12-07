@@ -30,43 +30,43 @@ namespace CsharpProject
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Temperature",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Feels like",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Humidity",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Preasure",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Wind speed",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Wind direction",
             "-"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Visibility",
             "-"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.materialTabControl1 = new MaterialThemeCore.MaterialControls.MaterialTabControl();
             this.currentPage = new System.Windows.Forms.TabPage();
             this.errorLabel = new System.Windows.Forms.Label();
-            this.materialFlatButton12 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton11 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton10 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton3 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton9 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton4 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton8 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton1 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton5 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton7 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
-            this.materialFlatButton6 = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnKiev = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnBucharest = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnMoscow = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnStockholm = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnVienna = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btwVilnius = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnRome = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnParis = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnLondom = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnMadrid = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnBerlin = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
+            this.btnAthens = new MaterialThemeCore.MaterialControls.MaterialFlatButton();
             this.CurrentWeatherGroupBox = new System.Windows.Forms.GroupBox();
             this.currentWeatherListView = new MaterialThemeCore.MaterialControls.MaterialListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -129,18 +129,18 @@ namespace CsharpProject
             // 
             this.currentPage.BackColor = System.Drawing.Color.White;
             this.currentPage.Controls.Add(this.errorLabel);
-            this.currentPage.Controls.Add(this.materialFlatButton12);
-            this.currentPage.Controls.Add(this.materialFlatButton11);
-            this.currentPage.Controls.Add(this.materialFlatButton10);
-            this.currentPage.Controls.Add(this.materialFlatButton3);
-            this.currentPage.Controls.Add(this.materialFlatButton9);
-            this.currentPage.Controls.Add(this.materialFlatButton2);
-            this.currentPage.Controls.Add(this.materialFlatButton4);
-            this.currentPage.Controls.Add(this.materialFlatButton8);
-            this.currentPage.Controls.Add(this.materialFlatButton1);
-            this.currentPage.Controls.Add(this.materialFlatButton5);
-            this.currentPage.Controls.Add(this.materialFlatButton7);
-            this.currentPage.Controls.Add(this.materialFlatButton6);
+            this.currentPage.Controls.Add(this.btnKiev);
+            this.currentPage.Controls.Add(this.btnBucharest);
+            this.currentPage.Controls.Add(this.btnMoscow);
+            this.currentPage.Controls.Add(this.btnStockholm);
+            this.currentPage.Controls.Add(this.btnVienna);
+            this.currentPage.Controls.Add(this.btwVilnius);
+            this.currentPage.Controls.Add(this.btnRome);
+            this.currentPage.Controls.Add(this.btnParis);
+            this.currentPage.Controls.Add(this.btnLondom);
+            this.currentPage.Controls.Add(this.btnMadrid);
+            this.currentPage.Controls.Add(this.btnBerlin);
+            this.currentPage.Controls.Add(this.btnAthens);
             this.currentPage.Controls.Add(this.CurrentWeatherGroupBox);
             this.currentPage.Controls.Add(this.materialLabel6);
             this.currentPage.Controls.Add(this.searchCityTextField);
@@ -165,197 +165,209 @@ namespace CsharpProject
             this.errorLabel.TabIndex = 23;
             this.errorLabel.Text = "Can\'t locate city :(";
             // 
-            // materialFlatButton12
+            // btnKiev
             // 
-            this.materialFlatButton12.AutoSize = true;
-            this.materialFlatButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton12.Depth = 0;
-            this.materialFlatButton12.Icon = null;
-            this.materialFlatButton12.Location = new System.Drawing.Point(479, 384);
-            this.materialFlatButton12.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton12.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton12.Name = "materialFlatButton12";
-            this.materialFlatButton12.Primary = false;
-            this.materialFlatButton12.Size = new System.Drawing.Size(50, 36);
-            this.materialFlatButton12.TabIndex = 22;
-            this.materialFlatButton12.Text = "Kiev";
-            this.materialFlatButton12.UseVisualStyleBackColor = true;
+            this.btnKiev.AutoSize = true;
+            this.btnKiev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnKiev.Depth = 0;
+            this.btnKiev.Icon = null;
+            this.btnKiev.Location = new System.Drawing.Point(479, 384);
+            this.btnKiev.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnKiev.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnKiev.Name = "btnKiev";
+            this.btnKiev.Primary = false;
+            this.btnKiev.Size = new System.Drawing.Size(50, 36);
+            this.btnKiev.TabIndex = 22;
+            this.btnKiev.Text = "Kiev";
+            this.btnKiev.UseVisualStyleBackColor = true;
+            this.btnKiev.Click += new System.EventHandler(this.btnKiev_Click);
             // 
-            // materialFlatButton11
+            // btnBucharest
             // 
-            this.materialFlatButton11.AutoSize = true;
-            this.materialFlatButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton11.Depth = 0;
-            this.materialFlatButton11.Icon = null;
-            this.materialFlatButton11.Location = new System.Drawing.Point(416, 478);
-            this.materialFlatButton11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton11.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton11.Name = "materialFlatButton11";
-            this.materialFlatButton11.Primary = false;
-            this.materialFlatButton11.Size = new System.Drawing.Size(99, 36);
-            this.materialFlatButton11.TabIndex = 21;
-            this.materialFlatButton11.Text = "Bucharest";
-            this.materialFlatButton11.UseVisualStyleBackColor = true;
+            this.btnBucharest.AutoSize = true;
+            this.btnBucharest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBucharest.Depth = 0;
+            this.btnBucharest.Icon = null;
+            this.btnBucharest.Location = new System.Drawing.Point(416, 478);
+            this.btnBucharest.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBucharest.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnBucharest.Name = "btnBucharest";
+            this.btnBucharest.Primary = false;
+            this.btnBucharest.Size = new System.Drawing.Size(99, 36);
+            this.btnBucharest.TabIndex = 21;
+            this.btnBucharest.Text = "Bucharest";
+            this.btnBucharest.UseVisualStyleBackColor = true;
+            this.btnBucharest.Click += new System.EventHandler(this.btnBucharest_Click);
             // 
-            // materialFlatButton10
+            // btnMoscow
             // 
-            this.materialFlatButton10.AutoSize = true;
-            this.materialFlatButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton10.Depth = 0;
-            this.materialFlatButton10.Icon = null;
-            this.materialFlatButton10.Location = new System.Drawing.Point(479, 240);
-            this.materialFlatButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton10.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton10.Name = "materialFlatButton10";
-            this.materialFlatButton10.Primary = false;
-            this.materialFlatButton10.Size = new System.Drawing.Size(81, 36);
-            this.materialFlatButton10.TabIndex = 20;
-            this.materialFlatButton10.Text = "Moscow";
-            this.materialFlatButton10.UseVisualStyleBackColor = true;
+            this.btnMoscow.AutoSize = true;
+            this.btnMoscow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMoscow.Depth = 0;
+            this.btnMoscow.Icon = null;
+            this.btnMoscow.Location = new System.Drawing.Point(479, 240);
+            this.btnMoscow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMoscow.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnMoscow.Name = "btnMoscow";
+            this.btnMoscow.Primary = false;
+            this.btnMoscow.Size = new System.Drawing.Size(81, 36);
+            this.btnMoscow.TabIndex = 20;
+            this.btnMoscow.Text = "Moscow";
+            this.btnMoscow.UseVisualStyleBackColor = true;
+            this.btnMoscow.Click += new System.EventHandler(this.btnMoscow_Click);
             // 
-            // materialFlatButton3
+            // btnStockholm
             // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Icon = null;
-            this.materialFlatButton3.Location = new System.Drawing.Point(262, 249);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton3.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(103, 36);
-            this.materialFlatButton3.TabIndex = 13;
-            this.materialFlatButton3.Text = "Stockholm";
-            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.btnStockholm.AutoSize = true;
+            this.btnStockholm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStockholm.Depth = 0;
+            this.btnStockholm.Icon = null;
+            this.btnStockholm.Location = new System.Drawing.Point(262, 249);
+            this.btnStockholm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnStockholm.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnStockholm.Name = "btnStockholm";
+            this.btnStockholm.Primary = false;
+            this.btnStockholm.Size = new System.Drawing.Size(103, 36);
+            this.btnStockholm.TabIndex = 13;
+            this.btnStockholm.Text = "Stockholm";
+            this.btnStockholm.UseVisualStyleBackColor = true;
+            this.btnStockholm.Click += new System.EventHandler(this.btnStockholm_Click);
             // 
-            // materialFlatButton9
+            // btnVienna
             // 
-            this.materialFlatButton9.AutoSize = true;
-            this.materialFlatButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton9.Depth = 0;
-            this.materialFlatButton9.Icon = null;
-            this.materialFlatButton9.Location = new System.Drawing.Point(295, 454);
-            this.materialFlatButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton9.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton9.Name = "materialFlatButton9";
-            this.materialFlatButton9.Primary = false;
-            this.materialFlatButton9.Size = new System.Drawing.Size(70, 36);
-            this.materialFlatButton9.TabIndex = 19;
-            this.materialFlatButton9.Text = "Vienna";
-            this.materialFlatButton9.UseVisualStyleBackColor = true;
+            this.btnVienna.AutoSize = true;
+            this.btnVienna.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVienna.Depth = 0;
+            this.btnVienna.Icon = null;
+            this.btnVienna.Location = new System.Drawing.Point(295, 454);
+            this.btnVienna.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVienna.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnVienna.Name = "btnVienna";
+            this.btnVienna.Primary = false;
+            this.btnVienna.Size = new System.Drawing.Size(70, 36);
+            this.btnVienna.TabIndex = 19;
+            this.btnVienna.Text = "Vienna";
+            this.btnVienna.UseVisualStyleBackColor = true;
+            this.btnVienna.Click += new System.EventHandler(this.btnVienna_Click);
             // 
-            // materialFlatButton2
+            // btwVilnius
             // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(376, 321);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(72, 36);
-            this.materialFlatButton2.TabIndex = 12;
-            this.materialFlatButton2.Text = "Vilnius";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.btwVilnius.AutoSize = true;
+            this.btwVilnius.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btwVilnius.Depth = 0;
+            this.btwVilnius.Icon = null;
+            this.btwVilnius.Location = new System.Drawing.Point(376, 321);
+            this.btwVilnius.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btwVilnius.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btwVilnius.Name = "btwVilnius";
+            this.btwVilnius.Primary = false;
+            this.btwVilnius.Size = new System.Drawing.Size(72, 36);
+            this.btwVilnius.TabIndex = 12;
+            this.btwVilnius.Text = "Vilnius";
+            this.btwVilnius.UseVisualStyleBackColor = true;
+            this.btwVilnius.Click += new System.EventHandler(this.btwVilnius_Click);
             // 
-            // materialFlatButton4
+            // btnRome
             // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Icon = null;
-            this.materialFlatButton4.Location = new System.Drawing.Point(283, 546);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(59, 36);
-            this.materialFlatButton4.TabIndex = 14;
-            this.materialFlatButton4.Text = "Rome";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.btnRome.AutoSize = true;
+            this.btnRome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRome.Depth = 0;
+            this.btnRome.Icon = null;
+            this.btnRome.Location = new System.Drawing.Point(283, 546);
+            this.btnRome.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRome.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnRome.Name = "btnRome";
+            this.btnRome.Primary = false;
+            this.btnRome.Size = new System.Drawing.Size(59, 36);
+            this.btnRome.TabIndex = 14;
+            this.btnRome.Text = "Rome";
+            this.btnRome.UseVisualStyleBackColor = true;
+            this.btnRome.Click += new System.EventHandler(this.btnRome_Click);
             // 
-            // materialFlatButton8
+            // btnParis
             // 
-            this.materialFlatButton8.AutoSize = true;
-            this.materialFlatButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton8.Depth = 0;
-            this.materialFlatButton8.Icon = null;
-            this.materialFlatButton8.Location = new System.Drawing.Point(162, 454);
-            this.materialFlatButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton8.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton8.Name = "materialFlatButton8";
-            this.materialFlatButton8.Primary = false;
-            this.materialFlatButton8.Size = new System.Drawing.Size(60, 36);
-            this.materialFlatButton8.TabIndex = 18;
-            this.materialFlatButton8.Text = "Paris";
-            this.materialFlatButton8.UseVisualStyleBackColor = true;
+            this.btnParis.AutoSize = true;
+            this.btnParis.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnParis.Depth = 0;
+            this.btnParis.Icon = null;
+            this.btnParis.Location = new System.Drawing.Point(162, 454);
+            this.btnParis.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnParis.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnParis.Name = "btnParis";
+            this.btnParis.Primary = false;
+            this.btnParis.Size = new System.Drawing.Size(60, 36);
+            this.btnParis.TabIndex = 18;
+            this.btnParis.Text = "Paris";
+            this.btnParis.UseVisualStyleBackColor = true;
+            this.btnParis.Click += new System.EventHandler(this.btnParis_Click);
             // 
-            // materialFlatButton1
+            // btnLondom
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(128, 384);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(76, 36);
-            this.materialFlatButton1.TabIndex = 11;
-            this.materialFlatButton1.Text = "London";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.btnLondom.AutoSize = true;
+            this.btnLondom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLondom.Depth = 0;
+            this.btnLondom.Icon = null;
+            this.btnLondom.Location = new System.Drawing.Point(128, 384);
+            this.btnLondom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLondom.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnLondom.Name = "btnLondom";
+            this.btnLondom.Primary = false;
+            this.btnLondom.Size = new System.Drawing.Size(76, 36);
+            this.btnLondom.TabIndex = 11;
+            this.btnLondom.Text = "London";
+            this.btnLondom.UseVisualStyleBackColor = true;
+            this.btnLondom.Click += new System.EventHandler(this.btnLondom_Click);
             // 
-            // materialFlatButton5
+            // btnMadrid
             // 
-            this.materialFlatButton5.AutoSize = true;
-            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton5.Depth = 0;
-            this.materialFlatButton5.Icon = null;
-            this.materialFlatButton5.Location = new System.Drawing.Point(75, 574);
-            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton5.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton5.Name = "materialFlatButton5";
-            this.materialFlatButton5.Primary = false;
-            this.materialFlatButton5.Size = new System.Drawing.Size(72, 36);
-            this.materialFlatButton5.TabIndex = 15;
-            this.materialFlatButton5.Text = "Madrid";
-            this.materialFlatButton5.UseVisualStyleBackColor = true;
+            this.btnMadrid.AutoSize = true;
+            this.btnMadrid.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMadrid.Depth = 0;
+            this.btnMadrid.Icon = null;
+            this.btnMadrid.Location = new System.Drawing.Point(75, 574);
+            this.btnMadrid.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMadrid.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnMadrid.Name = "btnMadrid";
+            this.btnMadrid.Primary = false;
+            this.btnMadrid.Size = new System.Drawing.Size(72, 36);
+            this.btnMadrid.TabIndex = 15;
+            this.btnMadrid.Text = "Madrid";
+            this.btnMadrid.UseVisualStyleBackColor = true;
+            this.btnMadrid.Click += new System.EventHandler(this.btnMadrid_Click);
             // 
-            // materialFlatButton7
+            // btnBerlin
             // 
-            this.materialFlatButton7.AutoSize = true;
-            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton7.Depth = 0;
-            this.materialFlatButton7.Icon = null;
-            this.materialFlatButton7.Location = new System.Drawing.Point(262, 384);
-            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton7.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton7.Name = "materialFlatButton7";
-            this.materialFlatButton7.Primary = false;
-            this.materialFlatButton7.Size = new System.Drawing.Size(67, 36);
-            this.materialFlatButton7.TabIndex = 17;
-            this.materialFlatButton7.Text = "Berlin";
-            this.materialFlatButton7.UseVisualStyleBackColor = true;
+            this.btnBerlin.AutoSize = true;
+            this.btnBerlin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBerlin.Depth = 0;
+            this.btnBerlin.Icon = null;
+            this.btnBerlin.Location = new System.Drawing.Point(262, 384);
+            this.btnBerlin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBerlin.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnBerlin.Name = "btnBerlin";
+            this.btnBerlin.Primary = false;
+            this.btnBerlin.Size = new System.Drawing.Size(67, 36);
+            this.btnBerlin.TabIndex = 17;
+            this.btnBerlin.Text = "Berlin";
+            this.btnBerlin.UseVisualStyleBackColor = true;
+            this.btnBerlin.Click += new System.EventHandler(this.btnBerlin_Click);
             // 
-            // materialFlatButton6
+            // btnAthens
             // 
-            this.materialFlatButton6.AutoSize = true;
-            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton6.Depth = 0;
-            this.materialFlatButton6.Icon = null;
-            this.materialFlatButton6.Location = new System.Drawing.Point(416, 586);
-            this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton6.MouseState = MaterialThemeCore.MouseState.HOVER;
-            this.materialFlatButton6.Name = "materialFlatButton6";
-            this.materialFlatButton6.Primary = false;
-            this.materialFlatButton6.Size = new System.Drawing.Size(74, 36);
-            this.materialFlatButton6.TabIndex = 16;
-            this.materialFlatButton6.Text = "Athens";
-            this.materialFlatButton6.UseVisualStyleBackColor = true;
+            this.btnAthens.AutoSize = true;
+            this.btnAthens.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAthens.Depth = 0;
+            this.btnAthens.Icon = null;
+            this.btnAthens.Location = new System.Drawing.Point(416, 586);
+            this.btnAthens.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAthens.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.btnAthens.Name = "btnAthens";
+            this.btnAthens.Primary = false;
+            this.btnAthens.Size = new System.Drawing.Size(74, 36);
+            this.btnAthens.TabIndex = 16;
+            this.btnAthens.Text = "Athens";
+            this.btnAthens.UseVisualStyleBackColor = true;
+            this.btnAthens.Click += new System.EventHandler(this.btnAthens_Click);
             // 
             // CurrentWeatherGroupBox
             // 
@@ -387,13 +399,13 @@ namespace CsharpProject
             this.currentWeatherListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.currentWeatherListView.HideSelection = false;
             this.currentWeatherListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem8,
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
             this.currentWeatherListView.Location = new System.Drawing.Point(6, 66);
             this.currentWeatherListView.MouseLocation = new System.Drawing.Point(-1, -1);
             this.currentWeatherListView.MouseState = MaterialThemeCore.MouseState.OUT;
@@ -481,7 +493,6 @@ namespace CsharpProject
             this.searchCityTextField.Size = new System.Drawing.Size(160, 23);
             this.searchCityTextField.TabIndex = 7;
             this.searchCityTextField.TabStop = false;
-            this.searchCityTextField.Text = "Vilnius";
             this.searchCityTextField.UseSystemPasswordChar = false;
             // 
             // pictureBox1
@@ -525,7 +536,6 @@ namespace CsharpProject
             this.searchCountryCodeTextField.Size = new System.Drawing.Size(90, 23);
             this.searchCountryCodeTextField.TabIndex = 9;
             this.searchCountryCodeTextField.TabStop = false;
-            this.searchCountryCodeTextField.Text = "LT";
             this.searchCountryCodeTextField.UseSystemPasswordChar = false;
             // 
             // materialLabel5
@@ -622,12 +632,12 @@ namespace CsharpProject
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(205, 66);
             this.materialLabel4.MouseState = MaterialThemeCore.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(98, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(97, 18);
             this.materialLabel4.TabIndex = 4;
             this.materialLabel4.Text = "Country code";
             // 
@@ -635,13 +645,13 @@ namespace CsharpProject
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.materialLabel3.Location = new System.Drawing.Point(7, 23);
             this.materialLabel3.MouseState = MaterialThemeCore.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(116, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(110, 18);
             this.materialLabel3.TabIndex = 0;
             this.materialLabel3.Text = "Default location";
             // 
@@ -649,12 +659,12 @@ namespace CsharpProject
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(7, 66);
             this.materialLabel1.MouseState = MaterialThemeCore.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(35, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(33, 18);
             this.materialLabel1.TabIndex = 2;
             this.materialLabel1.Text = "City";
             // 
@@ -690,12 +700,12 @@ namespace CsharpProject
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(7, 23);
             this.materialLabel2.MouseState = MaterialThemeCore.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(44, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(42, 18);
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Units";
             // 
@@ -810,8 +820,6 @@ namespace CsharpProject
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage weeklyPage;
         private System.Windows.Forms.TabPage settingsPage;
-        private System.Windows.Forms.ColumnHeader ConditionColumn;
-        private System.Windows.Forms.ColumnHeader ValueColumn;
         private System.Windows.Forms.Label label1;
         private MaterialThemeCore.MaterialControls.MaterialTabSelector materialTabSelector1;
         private System.Windows.Forms.Timer timer1;
@@ -833,18 +841,18 @@ namespace CsharpProject
         private MaterialThemeCore.MaterialControls.MaterialLabel materialLabel5;
         private MaterialThemeCore.MaterialControls.MaterialLabel materialLabel6;
         private MaterialThemeCore.MaterialControls.MaterialSingleLineTextField searchCityTextField;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton12;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton11;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton10;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton9;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton8;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton7;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton6;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton5;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton4;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton3;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton2;
-        private MaterialThemeCore.MaterialControls.MaterialFlatButton materialFlatButton1;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnKiev;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnBucharest;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnMoscow;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnVienna;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnParis;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnBerlin;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnAthens;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnMadrid;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnRome;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnStockholm;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btwVilnius;
+        private MaterialThemeCore.MaterialControls.MaterialFlatButton btnLondom;
         private System.Windows.Forms.GroupBox CurrentWeatherGroupBox;
         private MaterialThemeCore.MaterialControls.MaterialListView currentWeatherListView;
         private System.Windows.Forms.Panel panel1;
@@ -852,8 +860,6 @@ namespace CsharpProject
         private MaterialThemeCore.MaterialControls.MaterialLabel weatherConditionLabel;
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.FlowLayoutPanel flowWeekForecastPanel;
-        private System.Windows.Forms.ColumnHeader conditionColumn;
-        private System.Windows.Forms.ColumnHeader valueColumn;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader Value;
     }

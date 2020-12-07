@@ -11,8 +11,9 @@ namespace APILibrary
     public class ForecastProvider
     {
         private static readonly HttpClientHandler clientHandler = new HttpClientHandler();
+        private static Queue<KeyValuePair<ForecastRequest, JObject>> cache = new Queue<KeyValuePair<ForecastRequest, JObject>>();
 
-        private static WeatherCurrent getCurrent(JToken json, bool metric)
+        protected virtual WeatherCurrent getCurrent(JToken json, bool metric)
         {
             if (metric)
             {
@@ -49,7 +50,7 @@ namespace APILibrary
                 };
             }
         }
-        private static WeatherDetailed getWeatherDayDetailed(JToken json, bool metric)
+        protected virtual WeatherDetailed getWeatherDayDetailed(JToken json, bool metric)
         {
             if (metric)
             {
@@ -102,16 +103,56 @@ namespace APILibrary
                 };
             }
         }
-        public (WeatherCurrent, WeatherDetailed, IList<WeatherDetailed>) getForecast(ForecastRequest forecastRequest)
-        { 
-            var client = new HttpClient(clientHandler);
+        protected virtual int compareForecasts(ForecastRequest r1, ForecastRequest r2)
+        {
+            if (r1.region.Equals(r2.region) && (r1.timeStamp.Date - r2.timeStamp).TotalMinutes >= 60)
+            {
+                if (r1.forecastType == r2.forecastType)
+                    return 1;
+                else if ((r1.forecastType == ForecastType.Today || r1.forecastType == ForecastType.Tomorrow || r1.forecastType == ForecastType.Weekly)
+                    &&
+                    (r2.forecastType == ForecastType.Today || r2.forecastType == ForecastType.Tomorrow || r2.forecastType == ForecastType.Weekly))
+                    return 1;
+                else
+                    return -1;
+            }
+            else if (r1.region.Equals(r2.region) && (r1.timeStamp.Date - r2.timeStamp).TotalMinutes < 60)
+            {
+                if (r1.forecastType == r2.forecastType)
+                    return 0;
+                else if ((r1.forecastType == ForecastType.Today || r1.forecastType == ForecastType.Tomorrow || r1.forecastType == ForecastType.Weekly)
+                    &&
+                    (r2.forecastType == ForecastType.Today || r2.forecastType == ForecastType.Tomorrow || r2.forecastType == ForecastType.Weekly))
+                    return 0;
+                else
+                    return -1;
+            }
+            else return -1;
+        }
+        protected virtual JObject getData(ForecastRequest forecastRequest)
+        {
             var request = (HttpRequestMessage)forecastRequest;
-
+            foreach (var element in cache)
+            {
+                if(compareForecasts(forecastRequest,element.Key) == 0)
+                {
+                    return element.Value;
+                }
+            }
+            var client = new HttpClient(clientHandler);
             using var response = client.SendAsync(request).Result;
             response.EnsureSuccessStatusCode();
             var body = response.Content.ReadAsStringAsync().Result;
             var json = JObject.Parse(body);
-            //Console.WriteLine(json);
+            cache.Enqueue(new KeyValuePair<ForecastRequest, JObject>(forecastRequest, json));
+            if (cache.Count > 10)
+                cache.Dequeue();
+            return json;
+        }
+        public virtual (WeatherCurrent, WeatherDetailed, IList<WeatherDetailed>) getForecast(ForecastRequest forecastRequest)
+        {
+            var json = getData(forecastRequest);
+            Console.WriteLine(json);
             if(!json["success"].Value<bool>())
             {
                 throw new Exception(json["error"].ToString());

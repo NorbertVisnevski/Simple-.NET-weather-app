@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace CsharpProject
 {
-    public static class Settings
+    public static class Store
     {
         public static UnitType unitType = UnitType.Metric;
-        public static string defaultCity= "Vilnius";
-        public static string defaultCountry = "LT";
+        public static string defaultCity = "Tataouine";
+        public static string defaultCountry = "TUN";
+        public static string currentCity;
+        public static string currentCountry;
         public static void save()
         {
             try
