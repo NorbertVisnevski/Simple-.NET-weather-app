@@ -6,10 +6,10 @@ using Tests.TestClasses;
 
 namespace Tests
 {
-    public class Tests
+    public class CacheTests
     {
         Cache cache;
-        public TestForecastProvider provider;
+        TestForecastProvider provider;
         [SetUp]
         public void Setup()
         {
@@ -201,6 +201,27 @@ namespace Tests
             }
             catch (Exception) { }
             Assert.AreEqual(provider.counter, 0);
+        }
+        [Test]
+        public void localCacheTes4()
+        {
+            var request = new ForecastRequest.ForecastRequestBuilder().buildRequest();
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            cache.add(request, null);
+            Assert.AreEqual(cache.Size, 10);
         }
     }
 }
