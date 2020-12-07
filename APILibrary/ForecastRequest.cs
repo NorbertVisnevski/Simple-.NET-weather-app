@@ -85,14 +85,14 @@ namespace APILibrary
                 return this;
             }
 
-            public ForecastRequest BuildRequest()
+            public ForecastRequest buildRequest()
             {
                 return new ForecastRequest
                 {
-                    region = city != null && country != null ? city + "," + country : latitude.ToString() + "," + longitude.ToString(),
+                    region = city != null && country != null ? city.ToLower() + "," + country.ToUpper() : latitude.ToString() + "," + longitude.ToString(),
                     unitType = unitType,
                     forecastType = forecastType,
-                    timeStamp = DateTime.Now
+                    timeStamp = DateTime.UtcNow
                 };
             }
         }

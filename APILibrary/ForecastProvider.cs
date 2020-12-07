@@ -21,10 +21,9 @@ namespace APILibrary
         {
             this.cache = cache;
         }
-        protected JObject fetchFromWeb(ForecastRequest forecastRequest, HttpRequestMessage request)
+        protected virtual JObject fetchFromWeb(ForecastRequest forecastRequest)
         {
-            Console.WriteLine("WEB");
-            Console.ReadLine();
+            var request = (HttpRequestMessage)forecastRequest;
             var client = new HttpClient(clientHandler);
             using var response = client.SendAsync(request).Result;
             response.EnsureSuccessStatusCode();
@@ -35,8 +34,7 @@ namespace APILibrary
         }
         protected virtual JObject getData(ForecastRequest forecastRequest)
         {
-            var request = (HttpRequestMessage)forecastRequest;
-            return cache.get(forecastRequest) ?? fetchFromWeb(forecastRequest, request);
+            return cache.get(forecastRequest) ?? fetchFromWeb(forecastRequest);
         }
         public virtual (WeatherCurrent, WeatherDetailed, IList<WeatherDetailed>) getForecast(ForecastRequest forecastRequest)
         {

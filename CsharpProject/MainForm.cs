@@ -73,7 +73,7 @@ namespace CsharpProject
                .setCountry(Store.currentCountry)
                .setUnityType(Store.unitType)
                 .setForecastType(ForecastType.Weekly)
-                .BuildRequest();
+                .buildRequest();
             try
             {
                 var list = Store.provider.getForecast(forecast).Item3;
@@ -96,7 +96,7 @@ namespace CsharpProject
                         .setCountry(country)
                         .setUnityType(Store.unitType)
                         .setForecastType(ForecastType.Current)
-                        .BuildRequest();
+                        .buildRequest();
             try
             {
                 var result = Store.provider.getForecast(forecast).Item1;

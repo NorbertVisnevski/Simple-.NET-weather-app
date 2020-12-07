@@ -15,7 +15,7 @@ namespace APILibrary
         public int Size { get=>cache.Count; }
         protected virtual int compareForecasts(ForecastRequest r1, ForecastRequest r2)
         {
-            if (r1.region.Equals(r2.region) && (r1.timeStamp.Date - r2.timeStamp).TotalMinutes >= 60)
+            if (r1.region.Equals(r2.region) && (r1.timeStamp.Date - r2.timeStamp.Date).TotalMinutes >= 60)
             {
                 if (r1.forecastType == r2.forecastType)
                     return 1;
@@ -57,6 +57,11 @@ namespace APILibrary
             cache.Enqueue(new KeyValuePair<ForecastRequest, JObject>(key, value));
             if (cache.Count > MAX_SIZE)
                 cache.Dequeue();
+        }
+
+        public void clear()
+        {
+            cache.Clear();
         }
     }
 }

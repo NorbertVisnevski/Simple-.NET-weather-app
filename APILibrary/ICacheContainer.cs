@@ -14,5 +14,6 @@ namespace APILibrary
         }
         public V get(K key);
         public void add(K key, V value);
+        public void clear();
     }
 }
