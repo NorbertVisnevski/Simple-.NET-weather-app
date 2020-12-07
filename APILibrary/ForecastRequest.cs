@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace APILibrary
 {
@@ -15,12 +12,10 @@ namespace APILibrary
         public string region { get; init; }
         public UnitType unitType { get; init; }
         public ForecastType forecastType { get; init; }
-        public DateTime timeStamp { get; private set; }
+        public DateTime timeStamp { get; init; }
 
         public static explicit operator HttpRequestMessage(ForecastRequest request)
         {
-            request.timeStamp = DateTime.UtcNow;
-
             StringBuilder sb = new StringBuilder();
             if (request.forecastType == ForecastType.Current)
             {
@@ -93,10 +88,11 @@ namespace APILibrary
             public ForecastRequest BuildRequest()
             {
                 return new ForecastRequest
-                { 
+                {
                     region = city != null && country != null ? city + "," + country : latitude.ToString() + "," + longitude.ToString(),
                     unitType = unitType,
-                    forecastType = forecastType
+                    forecastType = forecastType,
+                    timeStamp = DateTime.Now
                 };
             }
         }

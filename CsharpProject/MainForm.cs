@@ -36,50 +36,6 @@ namespace CsharpProject
             settingsCityTextField.Text = Store.defaultCity;
             settingsCountryCodeTextField.Text = Store.defaultCountry;
             loadCurrent(Store.defaultCity, Store.defaultCountry);
-
-
-            //var forecast1 = new ForecastRequest.ForecastRequestBuilder()
-            //   .setCity("vilnius")
-            //   .setCountry("lt")
-            //   .setUnityType(UnitType.Metric)
-            //   .setForecastType(ForecastType.Weekly)
-            //   .BuildRequest();
-            //var list = new ForecastProvider().getForecast(forecast1).Item3;
-            //int i = 0;
-            //foreach(var element in list)
-            //{
-            //    flowWeekForecastPanel.Controls.Add(AdvancedWeatherNodeGenerator.generateNode(DateTime.Now.AddDays(i++), element));
-            //}
-            //return;
-            //var forecast = new ForecastRequest.ForecastRequestBuilder()
-            //   .setCity("vilnius")
-            //   .setCountry("lt")
-            //   .setUnityType(UnitType.Metric)
-            //   .setForecastType(ForecastType.Current)
-            //   .BuildRequest();
-            //try
-            //{
-            //    var result = new ForecastProvider().getForecast(forecast).Item1;
-
-            //    regionLabel.Text = forecast.region.FirstCharToUpper();
-
-            //    weatherConditionLabel.Text = result.weatherShort.FirstCharToUpper();
-
-            //    currentWeatherListView.Items[0].SubItems[1].Text = result.temperature.ToString();
-            //    currentWeatherListView.Items[1].SubItems[1].Text = result.temperatureFeelsLike.ToString();
-            //    currentWeatherListView.Items[2].SubItems[1].Text = result.humidity.ToString();
-            //    currentWeatherListView.Items[3].SubItems[1].Text = result.preasure.ToString();
-            //    currentWeatherListView.Items[4].SubItems[1].Text = result.windSpeed.ToString();
-            //    currentWeatherListView.Items[5].SubItems[1].Text = result.windDirection;
-            //    currentWeatherListView.Items[6].SubItems[1].Text = result.visibility.ToString();
-            //    CurrentWeatherGroupBox.Visible = true;
-            //    errorLabel.Visible = false;
-            //}
-            //catch (Exception)
-            //{
-            //    CurrentWeatherGroupBox.Visible = false;
-            //    errorLabel.Visible = true;
-            //}
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -120,7 +76,7 @@ namespace CsharpProject
                 .BuildRequest();
             try
             {
-                var list = new ForecastProvider().getForecast(forecast).Item3;
+                var list = Store.provider.getForecast(forecast).Item3;
                 flowWeekForecastPanel.Controls.Clear();
                 int i = 0;
                 foreach (var element in list)
@@ -143,7 +99,7 @@ namespace CsharpProject
                         .BuildRequest();
             try
             {
-                var result = new ForecastProvider().getForecast(forecast).Item1;
+                var result = Store.provider.getForecast(forecast).Item1;
 
                 regionLabel.Text = forecast.region.FirstCharToUpper();
 

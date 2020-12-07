@@ -15,6 +15,7 @@ namespace CsharpProject
         public static string defaultCountry = "TUN";
         public static string currentCity;
         public static string currentCountry;
+        public static ForecastProvider provider = new ForecastProvider();
         public static void save()
         {
             try
