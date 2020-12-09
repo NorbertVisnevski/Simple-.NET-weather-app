@@ -6,6 +6,7 @@ namespace APILibrary
     {
         static void Main(string[] args)
         {
+            ForecastProvider.APIKey = "76d856611fmsha35ddf8e5adef10p1d1297jsn381734c61c69";
             var provider = new ForecastProvider();
             var forecast = new ForecastRequest.ForecastRequestBuilder()
                 .setCity("vilnius")

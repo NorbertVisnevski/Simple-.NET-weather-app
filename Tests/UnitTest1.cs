@@ -13,6 +13,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
+            ForecastProvider.APIKey = "76d856611fmsha35ddf8e5adef10p1d1297jsn381734c61c69";
             provider = new TestForecastProvider(cache = new Cache());
         }
 

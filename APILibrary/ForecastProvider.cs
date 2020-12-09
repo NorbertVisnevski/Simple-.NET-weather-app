@@ -13,9 +13,13 @@ namespace APILibrary
         protected static HttpClientHandler clientHandler = new HttpClientHandler();
         protected Cache cache = new Cache();
 
-        public ForecastProvider()
+        //"93180b7f8dmsh4dc746fc0c8c40ap1e51a7jsn5b99e028f513";
+        //"76d856611fmsha35ddf8e5adef10p1d1297jsn381734c61c69";
+        public static string APIKey { get; set; }
+
+        public ForecastProvider() : this(new Cache())
         {
-            this.cache = new Cache();
+
         }
         public ForecastProvider(Cache cache)
         {

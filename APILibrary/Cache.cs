@@ -13,6 +13,17 @@ namespace APILibrary
         private Queue<KeyValuePair<ForecastRequest, JObject>> cache = new Queue<KeyValuePair<ForecastRequest, JObject>>();
 
         public int Size { get=>cache.Count; }
+
+        public Cache() : this(10)
+        {
+
+        }
+        public Cache(int bufferSize)
+        {
+            if (bufferSize > 0)
+                MAX_SIZE = bufferSize;
+        }
+
         protected virtual int compareForecasts(ForecastRequest r1, ForecastRequest r2)
         {
             if (r1.region.Equals(r2.region) && (r1.timeStamp.Date - r2.timeStamp.Date).TotalMinutes >= 60)

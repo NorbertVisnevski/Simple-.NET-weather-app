@@ -27,7 +27,8 @@ namespace CsharpProject
         {
             timer1.Start();
             Store.load();
-            if(Store.unitType==UnitType.Metric){
+            ForecastProvider.APIKey = "76d856611fmsha35ddf8e5adef10p1d1297jsn381734c61c69";
+            if (Store.unitType==UnitType.Metric){
                 metricMaterialRadioButton.Select();
             }
             else{
