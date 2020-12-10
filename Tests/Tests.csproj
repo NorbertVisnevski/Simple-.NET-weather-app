@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APILibrary\APILibrary.csproj" />
+    <ProjectReference Include="..\CsharpProject\CsharpProject.csproj" />
   </ItemGroup>
 
 </Project>

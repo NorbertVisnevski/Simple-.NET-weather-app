@@ -82,6 +82,7 @@ namespace CsharpProject
             this.materialLabel5 = new MaterialThemeCore.MaterialControls.MaterialLabel();
             this.weeklyPage = new System.Windows.Forms.TabPage();
             this.flowWeekForecastPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.weeklyLabel = new MaterialThemeCore.MaterialControls.MaterialLabel();
             this.settingsPage = new System.Windows.Forms.TabPage();
             this.applySettingsButton = new MaterialThemeCore.MaterialControls.MaterialRaisedButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -553,6 +554,7 @@ namespace CsharpProject
             // 
             // weeklyPage
             // 
+            this.weeklyPage.Controls.Add(this.weeklyLabel);
             this.weeklyPage.Controls.Add(this.flowWeekForecastPanel);
             this.weeklyPage.Location = new System.Drawing.Point(4, 24);
             this.weeklyPage.Name = "weeklyPage";
@@ -565,10 +567,23 @@ namespace CsharpProject
             // 
             this.flowWeekForecastPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowWeekForecastPanel.AutoScroll = true;
-            this.flowWeekForecastPanel.Location = new System.Drawing.Point(42, 3);
+            this.flowWeekForecastPanel.Location = new System.Drawing.Point(42, 49);
             this.flowWeekForecastPanel.Name = "flowWeekForecastPanel";
-            this.flowWeekForecastPanel.Size = new System.Drawing.Size(900, 686);
+            this.flowWeekForecastPanel.Size = new System.Drawing.Size(900, 640);
             this.flowWeekForecastPanel.TabIndex = 0;
+            // 
+            // weeklyLabel
+            // 
+            this.weeklyLabel.AutoSize = true;
+            this.weeklyLabel.Depth = 0;
+            this.weeklyLabel.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.weeklyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.weeklyLabel.Location = new System.Drawing.Point(42, 13);
+            this.weeklyLabel.MouseState = MaterialThemeCore.MouseState.HOVER;
+            this.weeklyLabel.Name = "weeklyLabel";
+            this.weeklyLabel.Size = new System.Drawing.Size(99, 19);
+            this.weeklyLabel.TabIndex = 0;
+            this.weeklyLabel.Text = "weeeklyLabel";
             // 
             // settingsPage
             // 
@@ -775,7 +790,7 @@ namespace CsharpProject
             this.materialTabSelector1.Location = new System.Drawing.Point(161, 26);
             this.materialTabSelector1.MouseState = MaterialThemeCore.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(323, 38);
+            this.materialTabSelector1.Size = new System.Drawing.Size(329, 38);
             this.materialTabSelector1.TabIndex = 5;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -802,6 +817,7 @@ namespace CsharpProject
             this.CurrentWeatherGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.weeklyPage.ResumeLayout(false);
+            this.weeklyPage.PerformLayout();
             this.settingsPage.ResumeLayout(false);
             this.settingsPage.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -862,5 +878,6 @@ namespace CsharpProject
         private System.Windows.Forms.FlowLayoutPanel flowWeekForecastPanel;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader Value;
+        private MaterialThemeCore.MaterialControls.MaterialLabel weeklyLabel;
     }
 }

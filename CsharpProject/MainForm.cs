@@ -79,6 +79,7 @@ namespace CsharpProject
             {
                 var list = Store.provider.getForecast(forecast).Item3;
                 flowWeekForecastPanel.Controls.Clear();
+                weeklyLabel.Text = Store.currentCity;
                 int i = 0;
                 foreach (var element in list)
                 {

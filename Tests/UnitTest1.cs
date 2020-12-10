@@ -3,6 +3,7 @@ using Moq;
 using NUnit.Framework;
 using System;
 using Tests.TestClasses;
+using CsharpProject.StringExtensions;
 
 namespace Tests
 {
@@ -223,6 +224,20 @@ namespace Tests
             cache.add(request, null);
             cache.add(request, null);
             Assert.AreEqual(cache.Size, 10);
+        }
+    }
+
+    public class StringTests
+    {
+        [Test]
+        public void localCacheTes4()
+        {
+            string str= null;
+
+            str.FirstCharToUpper()
+
+
+            Assert.Throws()
         }
     }
 }
