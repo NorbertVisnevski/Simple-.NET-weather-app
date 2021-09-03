@@ -1,6 +1,6 @@
 # Simple .NET weather app
 
-This just a siple project which I made in like a day for my university assignment.
+This just a simple project which I made in like a day for my university assignment.
 
 ![Main screen](https://i.imgur.com/c9cWMbe.png)
 
